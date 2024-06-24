@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Country />
-      <CountryFun />
+      <CountryFun  />
     </>
   );
 }

@@ -25,7 +25,7 @@ export default class Country extends Component {
     render() {
         return (
             <div>
-                <h1>React Country Class Component</h1>
+                <h1>React Country Class Component...</h1>
                 <p>{this.state.countryName}</p>
                 <p>{this.state.Population}</p>
                 <button onClick={this.onChange}>Change Value</button>
