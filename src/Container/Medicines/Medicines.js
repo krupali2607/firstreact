@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Card, CardText, CardTitle, Col, Container, Row } from 'reactstrap';
+import { Button, Card, CardFooter, CardText, CardTitle, Col, Row } from 'reactstrap';
 
 const medicines = [
     {
@@ -68,7 +68,7 @@ function Medicines(props) {
                 {
                     data.map((v, i) => (
                         <Col sm="6" key={v.id} className='p-3'>
-                            <Card body style={{}} className='bg-dark text-white'>
+                            <Card body style={{ height: '28rem', backgroundColor: '#DAD3BE' }}>
                                 <CardTitle tag="h5">
                                     <div className='text-center'>
                                         <h2>{v.name}</h2>
@@ -76,20 +76,18 @@ function Medicines(props) {
                                     <hr />
                                 </CardTitle>
                                 <CardText>
-
                                     <p><b>Id</b> : {v.id}</p>
                                     <p><b>Price</b> : {v.price}</p>
                                     <p><b>expiry</b> : {v.expiry}</p>
                                     <p><b>Desc</b> : {v.desc}</p>
                                 </CardText>
-                                <Button color="secondary">
-                                    Add to Cart
-                                </Button>
+                                <CardFooter style={{ height: '22rem', backgroundColor: 'transparent' }} className='d-flex align-items-end justify-content-center'>
+                                    <Button style={{ backgroundColor: '#6F4E37' }} outline className='w-75' >
+                                        Add to Cart
+                                    </Button>
+                                </CardFooter>
                             </Card>
                         </Col>
-
-
-
                     ))
                 }
             </Row>
